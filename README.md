@@ -1,55 +1,56 @@
----
-layout: default
-title: The Space Complexity ReadMe
----
+# Time Complexity
 
-# Graph
+For comprehensive information on time complexity, please refer to this [webpage](https://kronosdp.github.io/SDA-odd-23/).
 
-- `addEdge(T source, T destination, long weight)`: O(E)
-- `addVertex(T vertex)`: O(1)
-- `printGraph()`: O(V + E)
-- `prim()`: O(V^2) or O((V + E) \* log(V))
-- `dijkstra()`: O((V + E) \* log(V))
-- `BFS()`: O(V + E)
-- `DFS()`: O(V + E)
-- `isEulerian()`: O(V)
-- `isHamiltonian()`: O(V!)
-- `isBipartite()`: O(V + E)
-- `isPlanar()`: O(V + E)
-- `isBiconnected()`: O(V + E)
-- `isStronglyConnected()`: O(V + E)
-- `getTranspose()`: O(V + E)
-- `hamiltonianCycle()`: O(V!)
-- `hamiltonianPath()`: O(V!)
-- `topologicalSort()`: O(V + E)
+# Contributing to this Repository
 
-# Linked List
+Thank you for contemplating contributions to thus project. To ensure seamless collaboration, kindly adhere to the following guidelines.
 
-| Method                  | Circle Linked List | Doubly Linked List |
-| ----------------------- | ------------------ | ------------------ |
-| `getSize()`             | O(1)               | O(1)               |
-| `append(E value)`       | O(1)               | O(1)               |
-| `remove(int pos)`       | O(N)               | O(N)               |
-| `get(int pos)`          | O(N)               | O(N)               |
-| `set(int pos, E value)` | O(N)               | O(N)               |
-| `removeFirst()`         | O(1)               | O(1)               |
-| `removeLast()`          | N/A                | O(1)               |
-| `addFirst(E value)`     | O(1)               | O(1)               |
-| `addLast(E value)`      | O(N)               | O(1)               |
-| `add(int pos, E value)` | O(N)               | O(N)               |
-| `sortAscending()`       | O(N^2)             | O(N^2)             |
-| `reverse()`             | O(N)               | O(N)               |
-| `isEmpty()`             | O(1)               | O(1)               |
+## How to Contribute
 
-# Tree
+1. **Fork the Repository:**
+   - Create a personal copy of the repository in your GitHub account.
 
-| Method                       | AVL Tree | Binary Tree |
-| ---------------------------- | -------- | ----------- |
-| `height(Node<E> N)`          | O(1)     | N/A         |
-| `insert(E element)`          | O(log N) | O(N)        |
-| `delete(E element)`          | O(log N) | O(N)        |
-| `find(E element)`            | O(log N) | O(N)        |
-| `traverse(int traverseType)` | O(N)     | O(N)        |
-| `isAVLTree()`                | O(N)     | N/A         |
-| `isBinaryTree()`             | N/A      | O(N)        |
-| `isBalanced()`               | N/A      | O(N)        |
+2. **Clone the Repository:**
+   - Download a local copy of the repository using the following command:
+     ```bash
+     git clone https://github.com/KronosDP/SDA-odd-23.git
+     ```
+
+3. **Create a New Branch:**
+   - Isolate your changes by creating a new branch with a meaningful name:
+     ```bash
+     git checkout -b branch-name
+     ```
+
+4. **Make Your Changes:**
+   - Edit the files using your preferred editor (e.g., VS Code) and save the modifications.
+
+5. **Stage Your Changes:**
+   - Add your changes to the staging area:
+     ```bash
+     git add .
+     ```
+
+6. **Commit Your Changes:**
+   - Save your changes with a descriptive commit message:
+     ```bash
+     git commit -m "Your commit message"
+     ```
+
+7. **Push Your Changes:**
+   - Upload your changes to GitHub:
+     ```bash
+     git push origin branch-name
+     ```
+
+8. **Submit a Pull Request:**
+   - Navigate to the GitHub page of your forked repository, click on "New pull request," select your branch, and submit the pull request.
+
+**Note:** Ensure that your branch is created from the `master` branch.
+
+Thank you for your contribution! We value your time and effort. Our team will review your changes, and if they align with the project's objectives, we will proceed with merging them. Should you have any inquiries or encounter issues, feel free to open an issue or reach out to us. Happy coding!
+
+# References
+
+The reference is attributed to [The Algorithms Github](https://github.com/TheAlgorithms).
