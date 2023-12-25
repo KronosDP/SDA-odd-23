@@ -224,7 +224,7 @@ class DoublyLinkedList<E extends Comparable<E>> {
             while (current.next != end) {
                 Node<E> nextNode = current.next;
 
-                // Compare using compareTo method of the Kelas class
+                // Compare using compareTo method of the Grade class
                 if (current.value.compareTo(nextNode.value) > 0) {
                     // Swap nodes
                     E temp = current.value;
@@ -245,7 +245,7 @@ class DoublyLinkedList<E extends Comparable<E>> {
             while (currentBack.prev != start.prev) { // include the start node
                 Node<E> prevNode = currentBack.prev;
 
-                // Compare using compareTo method of the Kelas class
+                // Compare using compareTo method of the Grade class
                 if (currentBack.value.compareTo(prevNode.value) < 0) {
                     // Swap nodes
                     E temp = currentBack.value;
@@ -282,7 +282,7 @@ class DoublyLinkedList<E extends Comparable<E>> {
             while (current.next != end) {
                 Node<E> nextNode = current.next;
 
-                // Compare using compareTo method of the Kelas class
+                // Compare using compareTo method of the Grade class
                 if (current.value.compareTo(nextNode.value) < 0) {
                     // Swap nodes
                     E temp = current.value;
@@ -303,7 +303,7 @@ class DoublyLinkedList<E extends Comparable<E>> {
             while (currentBack.prev != start.prev) { // include the start node
                 Node<E> prevNode = currentBack.prev;
 
-                // Compare using compareTo method of the Kelas class
+                // Compare using compareTo method of the Grade class
                 if (currentBack.value.compareTo(prevNode.value) > 0) {
                     // Swap nodes
                     E temp = currentBack.value;
@@ -484,11 +484,11 @@ class DoublyLinkedList<E extends Comparable<E>> {
             return;
         }
 
-        Kelas g1 = new Kelas("A", 100);
-        Kelas g2 = new Kelas("B", 90);
-        Kelas g3 = new Kelas("C", 200);
+        Grade g1 = new Grade("A", 100);
+        Grade g2 = new Grade("B", 90);
+        Grade g3 = new Grade("C", 200);
 
-        DoublyLinkedList<Kelas> cl = new DoublyLinkedList<Kelas>();
+        DoublyLinkedList<Grade> cl = new DoublyLinkedList<Grade>();
 
         cl.append(g1);
         cl.append(g2);
@@ -506,41 +506,4 @@ class DoublyLinkedList<E extends Comparable<E>> {
 
     }
 
-}
-
-class Kelas implements Comparable<Kelas> {
-    private String name;
-    private int capacity;
-
-    public Kelas(String name, int capacity) {
-        this.name = name;
-        this.capacity = capacity;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    @Override
-    public int compareTo(Kelas other) {
-        // Compare based on the capacity attribute
-        return Integer.compare(this.capacity, other.capacity);
-    }
-
-    @Override
-    public String toString() {
-        return "Kelas [name=" + name + ", capacity=" + capacity + "]";
-    }
 }

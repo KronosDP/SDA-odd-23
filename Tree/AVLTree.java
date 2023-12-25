@@ -426,69 +426,32 @@ public class AVLTree<E extends Comparable<E>> {
             return;
         }
 
-        AVLTree<Kelas> tree = new AVLTree<Kelas>();
-        tree.insert(new Kelas("A", 100));
-        tree.insert(new Kelas("B", 90));
-        tree.insert(new Kelas("C", 10));
-        tree.insert(new Kelas("D", 70));
-        tree.insert(new Kelas("E", 60));
-        tree.insert(new Kelas("F", 32));
-        tree.insert(new Kelas("G", 40));
-        tree.insert(new Kelas("H", 30));
-        tree.insert(new Kelas("I", 60));
-        tree.insert(new Kelas("J", 10));
+        AVLTree<Grade> tree = new AVLTree<Grade>();
+        tree.insert(new Grade("A", 100));
+        tree.insert(new Grade("B", 90));
+        tree.insert(new Grade("C", 10));
+        tree.insert(new Grade("D", 70));
+        tree.insert(new Grade("E", 60));
+        tree.insert(new Grade("F", 32));
+        tree.insert(new Grade("G", 40));
+        tree.insert(new Grade("H", 30));
+        tree.insert(new Grade("I", 60));
+        tree.insert(new Grade("J", 10));
         System.out.println(tree);
 
         // delete
-        tree.delete(new Kelas("C", 10));
-        tree.delete(new Kelas("D", 70));
-        tree.delete(new Kelas("E", 60));
-        tree.delete(new Kelas("F", 32));
-        tree.delete(new Kelas("G", 40));
+        tree.delete(new Grade("C", 10));
+        tree.delete(new Grade("D", 70));
+        tree.delete(new Grade("E", 60));
+        tree.delete(new Grade("F", 32));
+        tree.delete(new Grade("G", 40));
         System.out.println(tree);
 
         // find
-        System.out.println(tree.find(new Kelas("H", 30)));
+        System.out.println(tree.find(new Grade("H", 30)));
 
         System.out.println("Is AVL Tree (sorted & balance) " + tree.isAVLTree());
 
     }
 
-}
-
-class Kelas implements Comparable<Kelas> {
-    private String name;
-    private int capacity;
-
-    public Kelas(String name, int capacity) {
-        this.name = name;
-        this.capacity = capacity;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    @Override
-    public int compareTo(Kelas other) {
-        // Compare based on the capacity attribute
-        return Integer.compare(this.capacity, other.capacity);
-    }
-
-    @Override
-    public String toString() {
-        return "Kelas [name=" + name + ", capacity=" + capacity + "]";
-    }
 }
