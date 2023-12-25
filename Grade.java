@@ -26,7 +26,14 @@ public class Grade implements Comparable<Grade> {
     @Override
     public int compareTo(Grade other) {
         // Compare based on the capacity attribute
-        return Integer.compare(this.capacity, other.capacity);
+        int capacityComparison = Integer.compare(this.capacity, other.capacity);
+
+        // If capacities are equal, compare based on the name attribute
+        if (capacityComparison == 0) {
+            return this.name.compareTo(other.name);
+        }
+
+        return capacityComparison;
     }
 
     @Override
