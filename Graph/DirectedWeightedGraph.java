@@ -9,13 +9,11 @@ public class DirectedWeightedGraph<T> {
     private boolean bothWays;
     private Map<T, Integer> vertexToIndexMap; // New map to store vertex-index mapping
 
-    private class Edge<T> {
-        T source;
-        T destination;
+    private class Edge<E> {
+        E destination;
         long weight;
 
-        public Edge(T source, T destination, long weight) {
-            this.source = source;
+        public Edge(E source, E destination, long weight) {
             this.destination = destination;
             this.weight = weight;
         }
